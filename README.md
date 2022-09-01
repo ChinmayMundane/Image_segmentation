@@ -62,15 +62,13 @@ To find the centroid centers of the clusters, subtractive clustering is used.It 
 ## K -Means Clustering Algorithm
 
 
-* Input : **K**, set of points- x1, x2,.......,xn.
-* Place centroids C1,C2, C3,....., Ck at random location.
-* Repeat until convergence:
-   * For each point Xi
-      * Find nearest centroid Cj
-      * Assign Xi into that cluster J   
-   * For each cluster J = 1 , .... , K
-      * New centroid Cj = Mean of all points Xi assigned to cluster J in previous step.
-      * ![image](C:\Users\Lenovo\Pictures\Screenshots)
+* Specify number of clusters K.
+* Initialize centroids by first shuffling the dataset and then randomly selecting K data points for the centroids without replacement.
+* Keep iterating until there is no change to the centroids. i.e assignment of data points to clusters isn’t changing.
+    * Compute the sum of the squared distance between data points and all centroids.
+    * Assign each data point to the closest cluster (centroid).
+    * Compute the new centroids for the clusters by taking the average of the all data points that belong to each cluster.
+    
 
 
 
@@ -107,7 +105,8 @@ neighborhood of n = 7 is used because large neighborhoods produce more severe sm
 
 
 
-
+## Reference 
+https://www.sciencedirect.com/science/article/pii/S1877050915014143#:~:text=Subtractive%20clustering%20method%20is%20data,for%20the%20segmentation%20of%20image.
 
 
 
