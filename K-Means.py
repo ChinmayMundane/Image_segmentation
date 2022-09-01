@@ -4,7 +4,7 @@ import math as m
 import cv2
 
 
-image=cv2.imread("I:\image segmentation\image4.png")
+image=cv2.imread("I:\image segmentation\image1.png")
 K1 = input("No. Of Clusters : ")
 K = int(K1)
 h,w,c=image.shape
@@ -17,8 +17,6 @@ img=image.copy()
 diff = np.zeros(K,int)
 a1 = np.zeros([K,X],int)
 array_check = np.zeros([K,c],bool)
-
-
 # initialized random K points forming K centroids
 # and assigned each point of the image to that centroid
 # based on the difference of the points to clusters 
@@ -64,23 +62,23 @@ while(flag == 0):
                 if((a1[t,p]-Clusters[t,p])<5):
                     array_check[t,p] = True
 
-    if(array_check.all()==False):
+    if array_check[t,p] ==False in range(t-1,p-1):
         flag = 0
         for q in range(K):
             Clusters[q]=a1[q]
     else:
         break
-        
-            
+
+      
     
-
-
-
 if __name__ == '__main__':
 	cv2.imshow('original_image',image)
 	cv2.imshow('cluster_image',img)
 	cv2.waitKey(0)
 	cv2.destroyAllWindows()
+
+
+
 
 
 
