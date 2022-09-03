@@ -11,7 +11,7 @@ def distance(array , array1 , a ):
     for p in range(a):
         sum += (array[p] - array1[p])**2
     b = m.sqrt(sum)
-    dis = int(b)
+    dis = (b)
     return dis
 
 
@@ -19,7 +19,7 @@ def distance(array , array1 , a ):
 # Reading Image
 def reader():
     
-    image = plt.imread("/home/smit/Desktop/Trial.jpg")
+    image = plt.imread("/home/smit/Desktop/Image_segmentation/test.png")
     image1 = np.copy(image)
     plt.imshow(image)
     plt.show()
@@ -27,10 +27,10 @@ def reader():
     K1 = input("Enter Number Of Clusters : ")
     K = int(K1)
     
-    h,w,c = image.shape[0],image.shape[1],image.ndim
+    h,w,c = image.shape[0],image.shape[1],image.shape[2]
     
-    a = np.zeros([K,c],int) # Array To Store Old Cluster Centroids
-    a1 = np.zeros([K,c],int) # Array To Store New Cluster Centroids
+    a = np.zeros([K,c],float) # Array To Store Old Cluster Centroids
+    a1 = np.zeros([K,c],float) # Array To Store New Cluster Centroids
     array_check = np.zeros([K,c],bool) # Array To Check Difference In Old And New Cluster Centroids
 
     for pos in range(K): # To Randomly Select K Initial Cluster Centroid
@@ -39,8 +39,8 @@ def reader():
             r_y = random.randint(0,w-1)
             a[pos,i]=image[r_x,r_y,i]
 
-    dis = np.zeros(c,int)
-    cendis = np.zeros(K,int)
+    dis = np.zeros(c,float)
+    cendis = np.zeros(K,float)
     flag = 0
 
     count = 0
@@ -115,13 +115,13 @@ def reader():
         for m in range(K):
             arr = np.array(clust[m])
             for chan in range(c):
-                a1[m,chan]=int(((np.sum(arr[chan : :c])) / ((len(clust[m]))/c)))
+                a1[m,chan]=((np.sum(arr[chan : :c])) / ((len(clust[m]))/c))
         
         # To Check Whether New Cluster Centroid Is Similar To Old One Or Not
         print("Iteration Complete")
         for t in range(K):
             for p in range(c):
-                if((a1[t,p]-a[t,p])<5 and (a1[t,p]-a[t,p])>-5):
+                if((a1[t,p]-a[t,p])<0.01 and (a1[t,p]-a[t,p])>-0.01):
                     array_check[t,p] = True
 
         if(array_check.all()==True):
@@ -132,7 +132,7 @@ def reader():
                 a[q]=a1[q]
 
     # To Print Final Image
-    store = np.zeros(c,int)
+    store = np.zeros(c,float)
     for t in range(K):
         for p in range(len(clust_x[t])):
             for chan in range(c):

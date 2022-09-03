@@ -11,7 +11,7 @@ def distance(array , array1 , a ):
     for p in range(a):
         sum += (array[p] - array1[p])**2
     b = m.sqrt(sum)
-    dis = int(b)
+    dis = (b)
     return dis
 
 
@@ -19,7 +19,7 @@ def distance(array , array1 , a ):
 # Reading Image
 def reader():
     
-    image = plt.imread("/home/smit/Desktop/Image_segmentation/Trial.jpg")
+    image = plt.imread("/home/smit/Desktop/Image_segmentation/test.png")
     image1 = np.copy(image)
     plt.imshow(image)
     plt.show()
@@ -30,8 +30,8 @@ def reader():
     c = image.ndim 
     h,w = image.shape[0],image.shape[1]
     
-    a = np.zeros([K,c],int)
-    a1 = np.zeros([K,c],int)
+    a = np.zeros([K,c],float)
+    a1 = np.zeros([K,c],float)
     array_check = np.zeros([K,c],bool)
 
     for pos in range(K):
@@ -39,9 +39,8 @@ def reader():
             r_x = random.randint(0,h-1)
             r_y = random.randint(0,w-1)
             a[pos,i]=image[r_x,r_y,i]
-
-    dis = np.zeros(c,int)
-    cendis = np.zeros(K,int)
+    dis = np.zeros(c,float)
+    cendis = np.zeros(K,float)
     flag = 0
 
     while(flag == 0):
@@ -72,12 +71,12 @@ def reader():
         for m in range(K):
             arr = np.array(clust[m])
             for chan in range(c):
-                a1[m,chan]=int(((np.sum(arr[chan : :c])) / ((len(clust[m]))/c)))
+                a1[m,chan]=(((np.sum(arr[chan : :c])) / ((len(clust[m]))/c)))
         
         print("Iteration Complete")
         for t in range(K):
             for p in range(c):
-                if((a1[t,p]-a[t,p])<5 and (a1[t,p]-a[t,p])>-5):
+                if((a1[t,p]-a[t,p])<0.01 and (a1[t,p]-a[t,p])>-0.01):
                     array_check[t,p] = True
 
         if(array_check.all()==True):
@@ -87,7 +86,7 @@ def reader():
             for q in range(K):
                 a[q]=a1[q]
 
-    store = np.zeros(c,int)
+    store = np.zeros(c,float)
     for t in range(K):
         for p in range(len(clust_x[t])):
             for chan in range(c):
