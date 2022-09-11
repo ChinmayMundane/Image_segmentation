@@ -3,6 +3,7 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 import math as m
+import time
 
 
 # To Calculate Distance
@@ -14,8 +15,6 @@ def distance(array , array1 , a ):
     dis = (b)
     return dis
 
-
-
 # Reading Image
 def reader():
     
@@ -26,7 +25,7 @@ def reader():
     
     K1 = input("Enter Number Of Clusters : ")
     K = int(K1)
-    
+    start = time.time()
     h,w,c = image.shape[0],image.shape[1],image.shape[2]
     
     a = np.zeros([K,c],float) # Array To Store Old Cluster Centroids
@@ -115,7 +114,7 @@ def reader():
         for m in range(K):
             arr = np.array(clust[m])
             for chan in range(c):
-                a1[m,chan]=((np.sum(arr[chan : :c])) / ((len(clust[m]))/c))
+                a1[m,chan]=np.sum(arr[chan : :c]) / (len(clust[m])/c)
         
         # To Check Whether New Cluster Centroid Is Similar To Old One Or Not
         print("Iteration Complete")
@@ -138,7 +137,8 @@ def reader():
             for chan in range(c):
                 store[chan] = a1[t,chan]
             image1[clust_x[t][p],clust_y[t][p]] = store
-
+    end = time.time()
+    print("The time of execution of above program is :",(end-start), "s")
     plt.imshow(image1)
     plt.show()
     plt.imshow(image)

@@ -3,6 +3,7 @@ import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 import math as m
+import time
 
 
 # To Calculate Distance
@@ -26,9 +27,9 @@ def reader():
     
     K1 = input("Enter Number Of Clusters : ")
     K = int(K1)
-    
-    c = image.ndim 
-    h,w = image.shape[0],image.shape[1]
+    start = time.time()
+     
+    h,w,c = image.shape[0],image.shape[1],image.shape[2]
     
     a = np.zeros([K,c],float)
     a1 = np.zeros([K,c],float)
@@ -39,6 +40,7 @@ def reader():
             r_x = random.randint(0,h-1)
             r_y = random.randint(0,w-1)
             a[pos,i]=image[r_x,r_y,i]
+
     dis = np.zeros(c,float)
     cendis = np.zeros(K,float)
     flag = 0
@@ -50,7 +52,7 @@ def reader():
         clust = []
         for y in range (K):
             clust_x.append([])
-            clust_y.append([])
+            clust_y.append([]) 
             clust.append([])
         
         for i in range(h):
@@ -62,10 +64,10 @@ def reader():
                 mdis = min(cendis)
 
                 for k in range(K):
-                    for chan in range(c):
-                        if(mdis == cendis[k]):
-                            clust_x[k].append(i)
-                            clust_y[k].append(j)
+                    if(mdis == cendis[k]):
+                        clust_x[k].append(i)
+                        clust_y[k].append(j)
+                        for chan in range(c):
                             clust[k].append(image[i,j,chan])
 
         for m in range(K):
@@ -92,7 +94,8 @@ def reader():
             for chan in range(c):
                 store[chan] = a1[t,chan]
             image1[clust_x[t][p],clust_y[t][p]] = store
-
+    end = time.time()
+    print("The time of execution of above program is :",(end-start), "s")
     plt.imshow(image1)
     plt.show()
     plt.imshow(image)
