@@ -49,6 +49,7 @@ when appling kmeans we saw that it took too much time to run .So , we searched f
 finally we found improved kmeans which claimed to reduce time significantly.
 
 
+
 # Improved K-means
 while Kmeans takes a little too much of a time, improved kmeans is more time efficient and is more accurate.
 The main idea of algorithm is to 
@@ -103,6 +104,7 @@ centers, Until the convergence criteria is met.
 
 # Conclusion
 To conclude , we applied two methods, mainly : kmeans and improved kmeans to segment the image.
+After applying both methods , we find that improved kmeans is more time efficient than kmeans.
 The results for both can be seen at the mains's readme file.
 
 
