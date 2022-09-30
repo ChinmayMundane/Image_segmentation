@@ -30,7 +30,7 @@ def K_MEANS_PLUS(image,K):
     for k in range(c):
         pixel.append(image[x,y,k])
     
-    initial_centroid = [np.array(pixel)]
+    initial_centroids = [np.array(pixel)]
     distance = []
     cluster_x = []
     cluster_y = []
@@ -48,8 +48,8 @@ def K_MEANS_PLUS(image,K):
                 for chan in range(c):# chan denotes number of channels in an image
                     pixel1.append(image[i,j,chan])
                 
-                for k in range(len(initial_centroid)):
-                    distance.append(m.sqrt(np.sum((np.array(pixel1) - initial_centroid[k])**2)))
+                for k in range(len(initial_centroids)):
+                    distance.append(m.sqrt(np.sum((np.array(pixel1) - initial_centroids[k])**2)))
                 mdis = min(distance)
                 distance = []
 
@@ -60,6 +60,6 @@ def K_MEANS_PLUS(image,K):
         index1 = min_distance.index(maximum)
         for chan in range(c):
             pixel.append(image[ cluster_x[index1] , cluster_y[index1] , chan ])
-        initial_centroid.append(pixel)
+        initial_centroids.append(pixel)
         count = count - 1
-    return initial_centroid
+    return initial_centroids
