@@ -6,7 +6,6 @@ import cv2
 import math as m
 import time
 
-# To Calculate Distance
 def distance(Datapoint , Initial , Channels ):
     """
     Description : The Given Function 'distance' Is Used To Generate Euclidean Distance Between All Datapoints (Pixel Intensity)
@@ -30,9 +29,6 @@ def distance(Datapoint , Initial , Channels ):
     dis = m.sqrt(sum)
     return dis
 
-
-
-# Reading Image
 def K_MEANS(path,K,Initialiser = 2):
     """
         Description : Function 'Improved' Is Used To Generate Image On Which K-Clusters Are Generated Using K-Means Improved

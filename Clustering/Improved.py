@@ -6,8 +6,6 @@ import cv2
 import math as m
 import time
 
-
-# To Calculate Distance
 def distance(Datapoint , Initial , Channels ):
     """
     Description : The Given Function 'distance' Is Used To Generate Euclidean Distance Between All Datapoints (Pixel Intensity)
@@ -31,7 +29,6 @@ def distance(Datapoint , Initial , Channels ):
     dis = m.sqrt(sum)
     return dis
 
-# Reading Image
 def K_MEANS_IMPROVED(path,K,Initialiser = 2):
     """
     Description : Function 'K_MEANS_IMPROVED' Is Used To Generate Image On Which K-Clusters Are Generated Using K-Means Improved
@@ -63,8 +60,8 @@ def K_MEANS_IMPROVED(path,K,Initialiser = 2):
     start = time.time()
     h,w,c = image.shape[0],image.shape[1],image.shape[2]
     
-    initial_centroids = np.zeros([K,c],float) # Array To Store Old Cluster Centroids
-    final_centroids = np.zeros([K,c],float) # Array To Store New Cluster Centroids
+    initial_centroids = np.zeros([K,c],float)
+    final_centroids = np.zeros([K,c],float)
 
     array_check = np.zeros([K,c],bool) # Array To Check Difference In Old And New Cluster Centroids
 
@@ -82,8 +79,8 @@ def K_MEANS_IMPROVED(path,K,Initialiser = 2):
     flag = 0
     count = 0
     
-    initial_distance = [] # 1st Data Type To Store Inital Distance
-    cluster_label = [] # 2nd Data Type To Store Cluster Label
+    initial_distance = [] 
+    cluster_label = []
 
     while(flag == 0):
         
@@ -118,14 +115,14 @@ def K_MEANS_IMPROVED(path,K,Initialiser = 2):
                             for chan in range(c):
                                 dis[chan] = image[i,j,chan]
                             center_distance[l] = distance(dis , initial_centroids[l] , c )
-                        initial_distance[counter]=min(center_distance) # 1st Data Type To Store Inital Distance
+                        initial_distance[counter]=min(center_distance)
                         mdis = min(center_distance)
 
                         for k in range(K):
                             if(mdis == center_distance[k]):
                                 cluster_x[k].append(i)
                                 cluster_y[k].append(j)
-                                cluster_label[counter]=k # 2nd Data Type To Store Cluster Label
+                                cluster_label[counter]=k
                                 for chan in range(c):
                                     cluster[k].append(image[i,j,chan])
                        
@@ -135,14 +132,14 @@ def K_MEANS_IMPROVED(path,K,Initialiser = 2):
                         for chan in range(c):
                             dis[chan] = image[i,j,chan]
                         center_distance[l] = distance(dis , initial_centroids[l] , c )
-                    initial_distance.append(min(center_distance)) # 1st Data Type To Store Inital Distance
+                    initial_distance.append(min(center_distance))
                     mdis = min(center_distance)
 
                     for k in range(K):
                         if(mdis == center_distance[k]):
                             cluster_x[k].append(i)
                             cluster_y[k].append(j)
-                            cluster_label.append(k) # 2nd Data Type To Store Cluster Label
+                            cluster_label.append(k)
                             for chan in range(c):
                                 cluster[k].append(image[i,j,chan])
                     continue
