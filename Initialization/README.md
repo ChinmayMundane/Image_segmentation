@@ -32,16 +32,16 @@ will reduce its potential value, the next cluster center will be grid with many 
 center grid point. So this procedure of acquiring new cluster center and reducing the potential of surrounding grid
 point repeat until potential of all grid points falls below a threshold value.
 
-
+ 
 ## Steps
-1. Use the equation below to calculate the potential for every pixel value of the image. \
-![Screenshot (44)](https://user-images.githubusercontent.com/109454803/193085675-026e3575-3b05-4b08-b0ed-a21c0ff86bd6.png) \
+1. Use the equation below to calculate the potential for every pixel value of the image. ![image](https://user-images.githubusercontent.com/109454803/193424699-36fba5de-db7b-4200-b79f-ff6318bf4633.png)
+ \
 where, \
 data points: X = {x1, x2, x3 . . . xn } \
 ra is hyper sphere cluster radius in data space
 2. Find maximum potential in step 1 and set that point be first center cluster and its corresponding potential as
 maximum potential.
-3. Use equation ![Screenshot (45)](https://user-images.githubusercontent.com/109454803/193086704-deacde97-91bf-4c9e-b9a2-b8ace05de945.png)
+3. Use equation ![image](https://user-images.githubusercontent.com/109454803/193424756-a5df5b03-e92b-49ba-a5b3-2e9cc6b0517e.png)
 
 to update the potential value of other remaining pixels based on the first cluster center. \
 where, \
