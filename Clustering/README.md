@@ -39,7 +39,7 @@ the more similar the data points are within the same cluster.
 
 
 
-## Disadvantags
+## Disadvantages
 Though K-means is relatively simplier to implement, it has some disadvantages
 1. It chooses k centroids manually.\
 when we choose the centroids randomly , we are at a risk of 
