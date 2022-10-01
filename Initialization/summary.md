@@ -85,6 +85,5 @@ the results can be seen at main's readme file
 
 
 # References
-Subtractive clustering - https://www.researchgate.net/publication/233932671_Fuzzy_Model_Identification_Based_on_Cluster_Estimation?enrichId=rgreq-08593b3226677b5b8cbc445ed54fdebb-XXX&enrichSource=Y292ZXJQYWdlOzIzMzkzMjY3MTtBUzoxOTA0MTEzNjA0NDAzMjBAMTQyMjQwOTAxNDAzOQ%3D%3D&el=1_x_2&_esc=publicationCoverPdf \
-Kmeans++ - https://www.geeksforgeeks.org/ml-k-means-algorithm/
+Subtractive clustering - https://www.researchgate.net/publication/233932671_Fuzzy_Model_Identification_Based_on_Cluster_Estimation?enrichId=rgreq-08593b3226677b5b8cbc445ed54fdebb-XXX&enrichSource=Y292ZXJQYWdlOzIzMzkzMjY3MTtBUzoxOTA0MTEzNjA0NDAzMjBAMTQyMjQwOTAxNDAzOQ%3D%3D&el=1_x_2&_esc=publicationCoverPdf 
 
