@@ -13,6 +13,8 @@ Kmeans++
 - [Kmeans++](#Kmeans++)
   - [Steps](#Steps)
   - [Disadvantages](#Disadvantages)
+- [Random Initialization method](#Random_Initialization_method)
+  - [Steps](#Steps)
 - [Conclusion](#Conclusion)
 - [References](#References)
 
@@ -76,7 +78,23 @@ as centroid is directly proportional to its distance from the nearest, previousl
 After applying Kmeans++ to kmeans and improved kmeans , we found that whn we applied only improved kmeans ,
  its runtime was still better as compared to application of kmeans++ and improved kmeans.
  
- 
+# Random Initialization method
+we tried another method as previous methods didn't give us satisfied result.
+This time we used random initialization method. \
+In this method, we basically iterate for certain time to find random clusters. 
+And in this iteration, whose clusters are far away from one another are chosen to be  our initial cluster for kmeans.
+we do this  because we want to segment image very accurately and if clusters are far away from one another,it will give us better output.
+
+## Steps
+- Randomly initialise K centroids.
+- find the Sum OF Square Of Distance between each K centroids
+- iterate this for 'n' no. of times(for our project we chose n = 10)
+- find that Set Of Initial Cluster Centroid whose sum is maximum as its distance will also be maximum.
+- set that to be our initial cluster centroid and run kmeans or improved kmeans on it.
+
+
+
+
 # Conclusion
 We can say that initialization methods are definitely better than applying only kmeans, if used with kmeans++ 
 as subtractive clustering takes most time, out of all.
