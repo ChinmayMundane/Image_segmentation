@@ -77,7 +77,7 @@ as centroid is directly proportional to its distance from the nearest, previousl
 4. Repeat steps 2 and 3 until k centroids have been sampled.
 
 ## Disadvantages
-After applying Kmeans++ to kmeans and improved kmeans , we found that whn we applied only improved kmeans ,
+After applying Kmeans++ to kmeans and improved kmeans , we found that when we applied only improved kmeans ,
  its runtime was still better as compared to application of kmeans++ and improved kmeans.
  
 # Random Initialization method
