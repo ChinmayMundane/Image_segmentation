@@ -4,7 +4,8 @@ Our kmeans algorithm chooses random k points as our cluster centroid to segment 
 this process is not time saving as centroids are taken at random and so optimal centers would be found after many iterations , which will increase our runtime.
 Therefore, different initialization techniques were used to limit the runtiime. Techniques used were as follows: \
 Subtractive clustering \
-Kmeans++ 
+Kmeans++ \
+Random Initialization method
 
 # Table of content
 - [Subtractive clustering](#Subtractive_clustering)
@@ -15,6 +16,7 @@ Kmeans++
   - [Disadvantages](#Disadvantages)
 - [Random Initialization method](#Random_Initialization_method)
   - [Steps](#Steps)
+  - [Disadvantages](#Disadvantages)
 - [Conclusion](#Conclusion)
 - [References](#References)
 
@@ -98,14 +100,16 @@ As you can see clusters are close to each other and so our image may give us som
 - find that Set Of Initial Cluster Centroid whose sum is maximum as its distance will also be maximum.
 - set that to be our initial cluster centroid and run kmeans or improved kmeans on it.
 
-
+## Disadvantages
+when compared with kmeans++ , we found that in some cases it is effective while in other , kmeans++ is better.
+So comparing both , we cannot know which method would be better but conversely you can say that both methods can be used.
 
 
 # Conclusion
-We can say that initialization methods are definitely better than applying only kmeans, if used with kmeans++ 
+We can say that initialization methods are definitely better than applying only kmeans, if used with kmeans++ or random initiaization
 as subtractive clustering takes most time, out of all.
 But overall, improved kmeans method single handedly defeats every combination in terms of time efficiency and accuracy.
-the results can be seen at main's readme file
+the results can be seen at main's readme file.
 
 
 # References
