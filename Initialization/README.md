@@ -84,6 +84,12 @@ This time we used random initialization method. \
 In this method, we basically iterate for certain time to find random clusters. 
 And in this iteration, whose clusters are far away from one another are chosen to be  our initial cluster for kmeans.
 we do this  because we want to segment image very accurately and if clusters are far away from one another,it will give us better output.
+for better understanding , see this diagram below. \
+![image](https://user-images.githubusercontent.com/109454803/193442834-c5b87801-f4eb-408d-83a4-fb26ff86cd1a.png) \
+As you can see clusters are close to each other and so our image may give us some faulty output as centroids will pick some
+ datapoints to which it doesn't belong. \
+ ![image](https://user-images.githubusercontent.com/109454803/193442936-c56888aa-283a-4770-a50c-a5f9ade9be7b.png) \
+ while here, centroids are far from each other and even if they are not at center of datapoints, it will still give us better output.
 
 ## Steps
 - Randomly initialise K centroids.
