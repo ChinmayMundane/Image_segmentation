@@ -3,7 +3,7 @@ Image segmentation using initialization techniques + K-means clustering algorith
 
 
 # Table of contents
-- [About The Project](#About_The_Project)
+- [About project](#About_project)
   - [Tech Stack](#Tech_Stack)
   - [File Structure](#File_Structure)
 - [Getting Started](#Getting_Started)
@@ -12,7 +12,7 @@ Image segmentation using initialization techniques + K-means clustering algorith
   - [Execution](#Execution)
 - [Theory and Approach](#Theory_and_Approach)
 -  [Flowchart](#Flowchart)
--  [Results and Demo](#Results_and_Demo)
+-  [Results](#Results)
 -  [Future Work](#Future_Work)
 -  [Contributors](#Contributors)
 -  [Acknowledgements and Resources](#Acknowledgements_and_Resources)
