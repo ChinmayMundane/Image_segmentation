@@ -3,22 +3,22 @@ Image segmentation using initialization techniques + K-means clustering algorith
 
 
 # Table of contents
-- [About project](#About_project)
-  - [Tech Stack](#Tech_Stack)
-  - [File Structure](#File_Structure)
-- [Getting Started](#Getting_Started)
-  - [Prerequisites and installlation](#Prerequisites_and_installlation)
+- [About the Project](#About-the-Project)
+  - [Tech Stack](#Tech-Stack)
+  - [File Structure](#File-Structure)
+- [Getting Started](#Getting-Started)
+  - [Prerequisites and installlation](#Prerequisites-and-installlation)
   - [Installation](#Installation)
   - [Execution](#Execution)
-- [Theory and Approach](#Theory_and_Approach)
+- [Theory and Approach](#Theory-and-Approach)
 -  [Flowchart](#Flowchart)
--  [Results](#Results)
--  [Future Work](#Future_Work)
+-  [Results and Demo](#Results-and-Demo)
+-  [Future Work](#Future-Work)
 -  [Contributors](#Contributors)
--  [Acknowledgements and Resources](#Acknowledgements_and_Resources)
+-  [Acknowledgements and Resources](#Acknowledgements-and-Resources)
 -  [License](#License)
 
-# About The Project
+# About the Project
 Image segmentation is the classification of an image into different groups. Here we have use k-means clustering algorithm for image segmentation.K -means clustering algorithm is an unsupervised algorithm and it is used to segment the interest area from the background. But before applying K -means algorithm, first partial stretching enhancement is applied to the image to improve the quality of the image. Next, Initialization techniques like subtractive clustering, kmeans++, random initialization is used to generate the initial centers and these centers are used in k-means algorithm for the segmentation of image. Then finally medial filter is applied to the segmented image to remove any unwanted region from the image.
 
 ## Tech Stack
