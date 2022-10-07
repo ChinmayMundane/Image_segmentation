@@ -83,7 +83,9 @@ So, after improving contrast of image and selecting no. of cluster centers, we n
 
 
 # Results and Demo
-
+![image](https://user-images.githubusercontent.com/109454803/194618933-bff15859-b4db-49b2-9e60-3c1f4a95ee2d.png) \
+![image](https://user-images.githubusercontent.com/109454803/194618973-02d9a2bc-8109-4dd6-9a93-3d38a8dbd2c5.png) \
+![image](https://user-images.githubusercontent.com/109454803/194619026-5c7ef824-7ee2-495c-9631-e8abc3b3c28b.png)
 
 
 # Future Work
