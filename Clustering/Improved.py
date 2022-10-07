@@ -1,6 +1,7 @@
-from random1 import RANDOM
-from KMeans_Plus import K_MEANS_PLUS
-from Subtractive_Clustering import SUBTRACTIVE
+from Initialization.Random import RANDOM
+from Initialization.KMeans_Plus import K_MEANS_PLUS
+from Initialization.Subtractive_Clustering import SUBTRACTIVE
+import random
 import numpy as np
 import cv2
 import math as m
@@ -29,7 +30,7 @@ def distance(Datapoint , Initial , Channels ):
     dis = m.sqrt(sum)
     return dis
 
-def K_MEANS_IMPROVED(path,K,Initialiser = 2):
+def K_MEANS_IMPROVED(path,K,Initialiser = 3):
     """
     Description : Function 'K_MEANS_IMPROVED' Is Used To Generate Image On Which K-Clusters Are Generated Using K-Means Improved
                   Code.It Finally Displays Clustered Image Along With Time Taken For Iteration
@@ -69,8 +70,14 @@ def K_MEANS_IMPROVED(path,K,Initialiser = 2):
         initial_centroids = SUBTRACTIVE(image,K)
     elif(Initialiser==1):
         initial_centroids = RANDOM(K)
-    else:
+    elif(Initialiser==2):
         initial_centroids = K_MEANS_PLUS(image,K)
+    else:
+        for pos in range(K):
+            # for i in range(c):
+            r_x = random.randint(0,h)
+            r_y = random.randint(0,w)
+            initial_centroids[pos]=image[r_x,r_y]
     
     initial_centroids = np.array(initial_centroids)
     dis = np.zeros(c,float)
