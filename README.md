@@ -95,13 +95,15 @@ Our main idea is to segment the image using kmeans from scratch.This project can
 
 - preprocessing
 our project requires processing the images under test. Image processing is the operation of converting images into computer readable data. To perform the necessary operations we used P.C.S (partial contrast stretching) which improves the contrast of image, so that the output would be better.
+To know more check [processing folder](https://github.com/ChinmayMundane/Image_segmentation/tree/main/Processing) .
 
 - Initialization techniques
-initializaton techniques are methods with which we find optimal cluster centers so that the runtime as well as the accuracy can be made better.we have used many techniques such as subtractive clustering, kmeans++ and randomm initialization for our project. out of them , kmeans++ and random initialization can be used. 
+initializaton techniques are methods with which we find optimal cluster centers so that the runtime as well as the accuracy can be made better.we have used many techniques such as subtractive clustering, kmeans++ and randomm initialization for our project. out of them , kmeans++ and random initialization can be used.
+To know more check [Initialization folder](https://github.com/ChinmayMundane/Image_segmentation/tree/main/Initialization)
 
 
 - K-Means clustering
-So, after improving contrast of image and selecting no. of cluster centers, we need to cluster them by using K-Means clustering.K-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean. To know more check Clustering folder.
+So, after improving contrast of image and selecting no. of cluster centers, we need to cluster them by using K-Means clustering.K-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean. To know more check [Clustering folder](https://github.com/ChinmayMundane/Image_segmentation/tree/main/Clustering).
 
 # Flowchart
 ![image](https://user-images.githubusercontent.com/109454803/194571838-40910895-9986-4b26-a158-4c7fcbde0854.png)
