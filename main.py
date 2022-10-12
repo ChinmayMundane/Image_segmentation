@@ -1,5 +1,5 @@
-from K_Means import K_MEANS
-from Improved import K_MEANS_IMPROVED
+from Clustering.K_Means import K_MEANS
+from Clustering.Improved import K_MEANS_IMPROVED
 
 def main():
     print("To Use K-Means Improved Method -----> 1")
