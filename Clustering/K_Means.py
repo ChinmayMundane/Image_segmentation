@@ -1,6 +1,6 @@
-from random1 import RANDOM
-from KMeans_Plus import K_MEANS_PLUS
-from Subtractive_Clustering import SUBTRACTIVE
+from Initialization.Random import RANDOM
+from Initialization.KMeans_Plus import K_MEANS_PLUS
+from Initialization.Subtractive_Clustering import SUBTRACTIVE
 import numpy as np
 import cv2
 import math as m
