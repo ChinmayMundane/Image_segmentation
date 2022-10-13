@@ -34,7 +34,8 @@ Image segmentation is the classification of an image into different groups. Here
 ```
 .📦
 ├── 📂assets				    # contains images and video			
-│   ├── 📜images										 
+│   ├── 📜images
+|   ├── 📜result.mp4
 ├── 📂Clustering                            # contains code of kmeans and improved kmeans and its breif summary
 |   ├── 📜Improved.py
 |   ├── 📜K_Means.py 
@@ -87,7 +88,7 @@ Now that you have installed the repo, let's get started with exciting part i.e. 
 - open your terminal(make sure you are in same folder/directory where you cloned the repo)
 - now run
 ```
-python <file_name>.py
+python3 <file_name>.py
 ```
 
 # Theory and Approach
@@ -113,7 +114,11 @@ So, after improving contrast of image and selecting no. of cluster centers, we n
 # Results and Demo
 ![image](https://user-images.githubusercontent.com/109454803/194618933-bff15859-b4db-49b2-9e60-3c1f4a95ee2d.png) \
 ![image](https://user-images.githubusercontent.com/109454803/194618973-02d9a2bc-8109-4dd6-9a93-3d38a8dbd2c5.png) \
-![image](https://user-images.githubusercontent.com/109454803/194619026-5c7ef824-7ee2-495c-9631-e8abc3b3c28b.png)
+![image](https://user-images.githubusercontent.com/109454803/194619026-5c7ef824-7ee2-495c-9631-e8abc3b3c28b.png) \
+watch the video below to see the demo of the project \
+
+https://user-images.githubusercontent.com/109454803/195652611-baf97b32-a5d6-41cb-94fb-1c6c9fb5aff7.mp4
+
 
 
 # Future Work
