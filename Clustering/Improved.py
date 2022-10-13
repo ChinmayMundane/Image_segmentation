@@ -180,7 +180,6 @@ def K_MEANS_IMPROVED(path,K,Initialiser = 3):
             image1[cluster_x[t][p],cluster_y[t][p]] = store
     end = time.time()
     print("The time of execution of above program is :",(end-start), "s")
-    cv2.imwrite("")
     cv2.imshow("Final Image",image1)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
