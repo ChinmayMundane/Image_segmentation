@@ -74,7 +74,6 @@ def K_MEANS_IMPROVED(path,K,Initialiser = 3):
         initial_centroids = K_MEANS_PLUS(image,K)
     else:
         for pos in range(K):
-            # for i in range(c):
             r_x = random.randint(0,h)
             r_y = random.randint(0,w)
             initial_centroids[pos]=image[r_x,r_y]
@@ -181,6 +180,7 @@ def K_MEANS_IMPROVED(path,K,Initialiser = 3):
             image1[cluster_x[t][p],cluster_y[t][p]] = store
     end = time.time()
     print("The time of execution of above program is :",(end-start), "s")
+    cv2.imwrite("")
     cv2.imshow("Final Image",image1)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
