@@ -104,7 +104,7 @@ initializaton techniques are methods with which we find optimal cluster centers 
 So, after improving contrast of image and selecting no. of cluster centers, we need to cluster them by using K-Means clustering.K-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean. To know more check Clustering folder.
 
 # Flowchart
-![image](https://user-images.githubusercontent.com/109454803/194571838-40910895-9986-4b26-a158-4c7fcbde0854.png)
+![image](https://user-images.githubusercontent.com/109454803/195906413-7e855bbc-df6d-4217-a74c-2d7d007e9deb.png)
 
 
 
