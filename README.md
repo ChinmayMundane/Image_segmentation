@@ -111,7 +111,16 @@ So, after improving contrast of image and selecting no. of cluster centers, we n
 # Results and Demo
 ![image](https://user-images.githubusercontent.com/109454803/194618933-bff15859-b4db-49b2-9e60-3c1f4a95ee2d.png) \
 ![image](https://user-images.githubusercontent.com/109454803/194618973-02d9a2bc-8109-4dd6-9a93-3d38a8dbd2c5.png) \
-![image](https://user-images.githubusercontent.com/109454803/194619026-5c7ef824-7ee2-495c-9631-e8abc3b3c28b.png)
+![image](https://user-images.githubusercontent.com/109454803/194619026-5c7ef824-7ee2-495c-9631-e8abc3b3c28b.png) 
+
+
+Result Analysis
+Algorithm used | No Pre-Initialization | K-means++ | Random Initialization | OpenCV 
+--- | --- | --- |--- |---
+K-means | 22.5s | 22.1s | 28.3s | 0.55s
+Improved K-means | 12.7s | 19.1s | 21.6s | 0.55s
+
+
 
 
 # Future Work
