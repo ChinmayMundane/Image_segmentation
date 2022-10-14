@@ -8,13 +8,13 @@ Kmeans++ \
 Random Initialization method
 
 # Table of content
-- [Subtractive clustering](#Subtractive_clustering)
+- [Subtractive clustering](#Subtractive-clustering)
   - [Steps](#Steps)
   - [Disadvantages](#Disadvantages)
 - [Kmeans++](#Kmeans++)
   - [Steps](#Steps)
   - [Disadvantages](#Disadvantages)
-- [Random Initialization method](#Random_Initialization_method)
+- [Random Initialization method](#Random-Initialization-method)
   - [Steps](#Steps)
   - [Disadvantages](#Disadvantages)
 - [Conclusion](#Conclusion)

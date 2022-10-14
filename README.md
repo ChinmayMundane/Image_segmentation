@@ -34,7 +34,8 @@ Image segmentation is the classification of an image into different groups. Here
 ```
 .📦
 ├── 📂assets				    # contains images and video			
-│   ├── 📜images										 
+│   ├── 📜images
+|   ├── 📜result.mp4
 ├── 📂Clustering                            # contains code of kmeans and improved kmeans and its breif summary
 |   ├── 📜Improved.py
 |   ├── 📜K_Means.py 
@@ -87,7 +88,7 @@ Now that you have installed the repo, let's get started with exciting part i.e. 
 - open your terminal(make sure you are in same folder/directory where you cloned the repo)
 - now run
 ```
-python <file_name>.py
+python3 <file_name>.py
 ```
 
 # Theory and Approach
@@ -95,13 +96,15 @@ Our main idea is to segment the image using kmeans from scratch.This project can
 
 - preprocessing
 our project requires processing the images under test. Image processing is the operation of converting images into computer readable data. To perform the necessary operations we used P.C.S (partial contrast stretching) which improves the contrast of image, so that the output would be better.
+To know more check [processing folder](https://github.com/ChinmayMundane/Image_segmentation/tree/main/Processing) .
 
 - Initialization techniques
-initializaton techniques are methods with which we find optimal cluster centers so that the runtime as well as the accuracy can be made better.we have used many techniques such as subtractive clustering, kmeans++ and randomm initialization for our project. out of them , kmeans++ and random initialization can be used. 
+initializaton techniques are methods with which we find optimal cluster centers so that the runtime as well as the accuracy can be made better.we have used many techniques such as subtractive clustering, kmeans++ and randomm initialization for our project. out of them , kmeans++ and random initialization can be used.
+To know more check [Initialization folder](https://github.com/ChinmayMundane/Image_segmentation/tree/main/Initialization)
 
 
 - K-Means clustering
-So, after improving contrast of image and selecting no. of cluster centers, we need to cluster them by using K-Means clustering.K-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean. To know more check Clustering folder.
+So, after improving contrast of image and selecting no. of cluster centers, we need to cluster them by using K-Means clustering.K-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean. To know more check [Clustering folder](https://github.com/ChinmayMundane/Image_segmentation/tree/main/Clustering).
 
 # Flowchart
 ![image](https://user-images.githubusercontent.com/109454803/195906413-7e855bbc-df6d-4217-a74c-2d7d007e9deb.png)
@@ -120,6 +123,10 @@ Algorithm used | No Pre-Initialization | K-means++ | Random Initialization | Ope
 K-means | 22.5s | 22.1s | 28.3s | 0.55s
 Improved K-means | 12.7s | 19.1s | 21.6s | 0.55s
 
+![image](https://user-images.githubusercontent.com/109454803/194619026-5c7ef824-7ee2-495c-9631-e8abc3b3c28b.png) \
+watch the video below to see the demo of the project \
+
+https://user-images.githubusercontent.com/109454803/195652611-baf97b32-a5d6-41cb-94fb-1c6c9fb5aff7.mp4
 
 
 
