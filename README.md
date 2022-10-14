@@ -107,13 +107,22 @@ To know more check [Initialization folder](https://github.com/ChinmayMundane/Ima
 So, after improving contrast of image and selecting no. of cluster centers, we need to cluster them by using K-Means clustering.K-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean. To know more check [Clustering folder](https://github.com/ChinmayMundane/Image_segmentation/tree/main/Clustering).
 
 # Flowchart
-![image](https://user-images.githubusercontent.com/109454803/194571838-40910895-9986-4b26-a158-4c7fcbde0854.png)
+![image](https://user-images.githubusercontent.com/109454803/195906413-7e855bbc-df6d-4217-a74c-2d7d007e9deb.png)
 
 
 
 # Results and Demo
 ![image](https://user-images.githubusercontent.com/109454803/194618933-bff15859-b4db-49b2-9e60-3c1f4a95ee2d.png) \
 ![image](https://user-images.githubusercontent.com/109454803/194618973-02d9a2bc-8109-4dd6-9a93-3d38a8dbd2c5.png) \
+![image](https://user-images.githubusercontent.com/109454803/194619026-5c7ef824-7ee2-495c-9631-e8abc3b3c28b.png) 
+
+
+Result Analysis
+Algorithm used | No Pre-Initialization | K-means++ | Random Initialization | OpenCV 
+--- | --- | --- |--- |---
+K-means | 22.5s | 22.1s | 28.3s | 0.55s
+Improved K-means | 12.7s | 19.1s | 21.6s | 0.55s
+
 ![image](https://user-images.githubusercontent.com/109454803/194619026-5c7ef824-7ee2-495c-9631-e8abc3b3c28b.png) \
 watch the video below to see the demo of the project \
 
