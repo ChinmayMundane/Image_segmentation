@@ -10,6 +10,7 @@ def main():
     print("To Use Subtractive Clustering Method -----> 0")
     print("To Use Random Initialization Method -----> 1")
     print("To Use K-Means++ Method -----> 2")
+    print("To Use No Prior Initialisation Technique-----> 3")
     b = input("Input : ")
     if(a==1):
         K_MEANS_IMPROVED(path,K,b)
