@@ -123,8 +123,10 @@ Algorithm used | No Pre-Initialization | K-means++ | Random Initialization | Ope
 K-means | 22.5s | 22.1s | 28.3s | 0.55s
 Improved K-means | 12.7s | 19.1s | 21.6s | 0.55s
 
-![image](https://user-images.githubusercontent.com/109454803/194619026-5c7ef824-7ee2-495c-9631-e8abc3b3c28b.png) \
-watch the video below to see the demo of the project \
+Above mentioned results were conducted for an image whose dimensions are 480 * 640 * 3.
+
+
+watch the video below to see the demo of the project 
 
 https://user-images.githubusercontent.com/109454803/195652611-baf97b32-a5d6-41cb-94fb-1c6c9fb5aff7.mp4
 
